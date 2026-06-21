@@ -58,13 +58,16 @@ class StreamingTranscriber:
 
     def _on_transcript(self, _, result, **kwargs):
         alt = result.channel.alternatives[0]
-        if alt.transcript.strip():
-            logger.info(
-                "Transcript (is_final=%s speech_final=%s): %s",
-                result.is_final,
-                result.speech_final,
-                alt.transcript,
-            )
+        # Uncomment this code to see utterance retranscribing in real time
+        # if alt.transcript.strip(): 
+        #     logger.info(
+        #         "Transcript (is_final=%s speech_final=%s): %s",
+        #         result.is_final,
+        #         result.speech_final,
+        #         alt.transcript,
+        #     )
+        if result.is_final and alt.transcript.strip():
+            logger.info("Transcript (speech_final=%s): %s", result.speech_final, alt.transcript)
         if result.speech_final and alt.transcript.strip():
             self._on_utterance_end(alt.transcript.strip())
 

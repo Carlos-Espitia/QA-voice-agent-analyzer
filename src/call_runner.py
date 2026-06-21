@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("call_runner")
 
 
-def place_call() -> str:
+def place_call(scenario: str) -> str:
     if not config.PUBLIC_BASE_URL:
         raise RuntimeError(
             "PUBLIC_BASE_URL is not set in .env — set it to your ngrok https URL first."
@@ -18,18 +18,14 @@ def place_call() -> str:
     call = client.calls.create(
         to=config.PGAI_TEST_NUMBER,
         from_=config.TWILIO_PHONE_NUMBER,
-        url=f"{config.PUBLIC_BASE_URL}/twiml/voice",
+        url=f"{config.PUBLIC_BASE_URL}/twiml/voice?scenario={scenario}",
     )
-    logger.info("Call placed: sid=%s to=%s", call.sid, config.PGAI_TEST_NUMBER)
+    logger.info("Call placed: sid=%s to=%s scenario=%s", call.sid, config.PGAI_TEST_NUMBER, scenario)
     return call.sid
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--scenario",
-        default="smoke_test",
-        help="Scenario name (ignored in Phase 1 — added in Phase 4).",
-    )
+    parser.add_argument("--scenario", default="smoke_test", help="Scenario name from src/scenarios")
     args = parser.parse_args()
-    place_call()
+    place_call(args.scenario)
