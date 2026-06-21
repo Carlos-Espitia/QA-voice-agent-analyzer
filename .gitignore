@@ -3,7 +3,4 @@ __pycache__/
 *.pyc
 .venv/
 venv/
-recordings/*.mp3
-recordings/*.ogg
-recordings/*.wav
-!recordings/.gitkeep
+recordings/

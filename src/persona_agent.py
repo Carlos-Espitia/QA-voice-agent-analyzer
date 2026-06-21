@@ -3,7 +3,7 @@ import logging
 from anthropic import Anthropic
 
 from src import config
-from src.scenarios import SCENARIOS
+from src.scenarios import build_system_prompt
 
 logger = logging.getLogger("persona_agent")
 
@@ -20,9 +20,8 @@ class PersonaAgent:
     test-case outcome").
     """
 
-    def __init__(self, scenario_name: str):
-        scenario = SCENARIOS.get(scenario_name, SCENARIOS["smoke_test"])
-        self._system_prompt = scenario["system_prompt"]
+    def __init__(self, scenario_name: str, persona_name: str | None = None):
+        self._system_prompt = build_system_prompt(scenario_name, persona_name)
         self._history: list[dict] = []
 
     def respond_to(self, agent_utterance: str) -> str:

@@ -22,13 +22,20 @@ class StreamingTranscriber:
     now generate our reply" instead of guessing from raw silence duration.
     """
 
-    def __init__(self, on_utterance_end: Callable[[str], None]):
+    def __init__(
+        self,
+        on_utterance_end: Callable[[str], None],
+        on_speech_activity: Callable[[], None] | None = None,
+    ):
         self._on_utterance_end = on_utterance_end
+        self._on_speech_activity = on_speech_activity
+        self._buffer: list[str] = []
         client = DeepgramClient(
             config.DEEPGRAM_API_KEY, DeepgramClientOptions(options={"keepalive": "true"})
         )
         self._connection = client.listen.websocket.v("1")
         self._connection.on(LiveTranscriptionEvents.Transcript, self._on_transcript)
+        self._connection.on(LiveTranscriptionEvents.UtteranceEnd, self._on_utterance_end_event)
         self._connection.on(LiveTranscriptionEvents.Open, self._on_open)
         self._connection.on(LiveTranscriptionEvents.Error, self._on_error)
         self._connection.on(LiveTranscriptionEvents.Close, self._on_close)
@@ -58,18 +65,31 @@ class StreamingTranscriber:
 
     def _on_transcript(self, _, result, **kwargs):
         alt = result.channel.alternatives[0]
-        # Uncomment this code to see utterance retranscribing in real time
-        # if alt.transcript.strip(): 
-        #     logger.info(
-        #         "Transcript (is_final=%s speech_final=%s): %s",
-        #         result.is_final,
-        #         result.speech_final,
-        #         alt.transcript,
-        #     )
+        if alt.transcript.strip() and self._on_speech_activity:
+            # Fires on interim results too — earliest possible signal that the
+            # agent is making sound, used by the server to cut off our TTS
+            # playback if we're talking over them.
+            self._on_speech_activity()
         if result.is_final and alt.transcript.strip():
             logger.info("Transcript (speech_final=%s): %s", result.speech_final, alt.transcript)
-        if result.speech_final and alt.transcript.strip():
-            self._on_utterance_end(alt.transcript.strip())
+            self._buffer.append(alt.transcript.strip())
+        if result.speech_final:
+            self._flush()
+
+    def _on_utterance_end_event(self, *_args, **kwargs):
+        # Fires from Deepgram's own silence-duration timer (utterance_end_ms),
+        # independent of speech_final — speech_final can fail to fire even
+        # after a long pause, so this is the reliable end-of-turn signal.
+        logger.info("Deepgram UtteranceEnd event")
+        self._flush()
+
+    def _flush(self):
+        if not self._buffer:
+            return
+        text = " ".join(self._buffer).strip()
+        self._buffer = []
+        if text:
+            self._on_utterance_end(text)
 
     def send_audio(self, mulaw_bytes: bytes):
         self._connection.send(mulaw_bytes)
