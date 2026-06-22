@@ -10,11 +10,11 @@ from fastapi.responses import Response
 from twilio.twiml.voice_response import Connect, VoiceResponse
 
 from src import config
-from src.persona_agent import PersonaAgent
-from src.scenarios import get_persona
-from src.stt import StreamingTranscriber
+from src.persona.agent import PersonaAgent
+from src.persona.scenarios import get_persona
 from src.transcript import CallTranscript, call_dir
-from src.tts import synthesize_ulaw_chunks
+from src.voice.stt import StreamingTranscriber
+from src.voice.tts import synthesize_ulaw_chunks
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("server")

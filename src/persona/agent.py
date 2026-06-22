@@ -3,7 +3,7 @@ import logging
 from anthropic import Anthropic
 
 from src import config
-from src.scenarios import build_system_prompt
+from src.persona.scenarios import build_system_prompt
 
 logger = logging.getLogger("persona_agent")
 
