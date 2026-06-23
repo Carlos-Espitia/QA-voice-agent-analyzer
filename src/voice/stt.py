@@ -30,6 +30,10 @@ class StreamingTranscriber:
         self._on_utterance_end = on_utterance_end
         self._on_speech_activity = on_speech_activity
         self._buffer: list[str] = []
+        # Set by the server once it knows the call's CallSid (the transcriber
+        # is constructed before the "start" event arrives) — purely for
+        # tagging log lines so concurrent calls' logs stay distinguishable.
+        self.call_sid: str | None = None
         client = DeepgramClient(
             config.DEEPGRAM_API_KEY, DeepgramClientOptions(options={"keepalive": "true"})
         )
@@ -71,7 +75,10 @@ class StreamingTranscriber:
             # playback if we're talking over them.
             self._on_speech_activity()
         if result.is_final and alt.transcript.strip():
-            logger.info("Transcript (speech_final=%s): %s", result.speech_final, alt.transcript)
+            logger.info(
+                "[%s] Transcript (speech_final=%s): %s",
+                self.call_sid, result.speech_final, alt.transcript,
+            )
             self._buffer.append(alt.transcript.strip())
         if result.speech_final:
             self._flush()
@@ -80,7 +87,7 @@ class StreamingTranscriber:
         # Fires from Deepgram's own silence-duration timer (utterance_end_ms),
         # independent of speech_final — speech_final can fail to fire even
         # after a long pause, so this is the reliable end-of-turn signal.
-        logger.info("Deepgram UtteranceEnd event")
+        logger.info("[%s] Deepgram UtteranceEnd event", self.call_sid)
         self._flush()
 
     def _flush(self):

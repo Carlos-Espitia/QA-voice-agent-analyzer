@@ -1,0 +1,107 @@
+{
+  "call_sid": "CAc5124dc9b4fad1e6a0bf2692a97324a2",
+  "scenario": "medical/schedule_new",
+  "persona": "alex_default",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "This call may be recorded for quality and training purposes.",
+      "timestamp": "2026-06-22T23:30:17.351645+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Oh, that's totally fine with me. I'm calling to schedule an appointment with a doctor.",
+      "timestamp": "2026-06-22T23:30:18.921225+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Thanks for calling PivotPoint Orthopedics. Part of Pretty Good AI. Am I speaking with Alex?",
+      "timestamp": "2026-06-22T23:30:24.486300+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yes, that's me, Alex Rivera. Hi there!",
+      "timestamp": "2026-06-22T23:30:25.896219+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Please provide your date of birth.",
+      "timestamp": "2026-06-22T23:30:33.481684+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Sure, it's March 4th, 1990.",
+      "timestamp": "2026-06-22T23:30:34.911899+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Thanks, Alex. What brings you in today? Are you looking for a general office visit, a follow-up, or something else?",
+      "timestamp": "2026-06-22T23:30:49.893306+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "I'm looking to schedule a new appointment. I've been dealing with some persistent lower back pain and I'd really like to see someone as soon as possible, ideally this week if there's anything available.",
+      "timestamp": "2026-06-22T23:30:51.818285+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Sounds like you need to be seen soon for your lower back pain. Just to confirm, is this a new issue that needs prompt attention? Or have you been seen here before for the same problem?",
+      "timestamp": "2026-06-22T23:31:15.782701+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "This is actually a new issue, and yeah, I haven't been seen here before for this. It's been bothering me for a couple weeks now and it's not really getting better, so I figured I should get it checked out.",
+      "timestamp": "2026-06-22T23:31:17.857486+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Thanks for sharing that, Alex. You have a specific doctor you'd like to see, or are you open to the first available provider?",
+      "timestamp": "2026-06-22T23:31:39.472984+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "I'm open to whoever's available soonest, honestly. I just want to get it looked at as soon as possible.",
+      "timestamp": "2026-06-22T23:31:41.999479+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Let me check for the soonest available appointments for a new patient consultation this week. It looks like you already have a new patient consultation appointment booked with us. If you'd like, I can help you reschedule or cancel that appointment, or I can connect you to a team member for further help. What would you like to do?",
+      "timestamp": "2026-06-22T23:32:10.762607+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Oh, that's interesting \u2014 I wasn't aware I had an appointment already. Could you tell me when that's scheduled for?",
+      "timestamp": "2026-06-22T23:32:12.978155+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "I don't have access to your exact appointment details, but I can connect you with a team member who can look that up and help you with your appointment. Would you like me to transfer you now?",
+      "timestamp": "2026-06-22T23:32:36.993692+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yes, that would be great. Please go ahead and transfer me to someone who can help. Thanks!",
+      "timestamp": "2026-06-22T23:32:38.747143+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Connecting you to a representative. Please wait.",
+      "timestamp": "2026-06-22T23:32:52.009350+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Sure, no problem. I'll hold. Thank you!",
+      "timestamp": "2026-06-22T23:32:53.299541+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Hello. You've reached the Pretty Good AI test line. Goodbye.",
+      "timestamp": "2026-06-22T23:32:57.509236+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Oh, okay! Well, I guess I'll call back and try again. Thanks anyway!",
+      "timestamp": "2026-06-22T23:32:59.069788+00:00"
+    }
+  ]
+}

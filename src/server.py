@@ -11,7 +11,8 @@ from twilio.twiml.voice_response import Connect, VoiceResponse
 
 from src import config
 from src.persona.agent import PersonaAgent
-from src.persona.scenarios import get_persona
+from src.persona.personas import get_persona
+from src.persona.scenarios import NOISY_SCENARIOS
 from src.transcript import CallTranscript, call_dir
 from src.voice.stt import StreamingTranscriber
 from src.voice.tts import synthesize_ulaw_chunks
@@ -31,8 +32,8 @@ async def twiml_voice(request: Request):
     """Twilio fetches this when the outbound call connects; it tells Twilio
     to open a Media Stream back to our websocket so we get raw call audio
     instead of being limited to turn-based <Gather>/<Say>."""
-    scenario = request.query_params.get("scenario", "smoke_test")
-    persona = request.query_params.get("persona", "")
+    scenario = request.query_params["scenario"]
+    persona = request.query_params["persona"]
     response = VoiceResponse()
     connect = Connect()
     ws_url = config.PUBLIC_BASE_URL.replace("https://", "wss://").replace("http://", "ws://")
@@ -71,9 +72,11 @@ async def media_stream(websocket: WebSocket):
     await websocket.accept()
     loop = asyncio.get_event_loop()
     stream_sid: str | None = None
+    call_sid: str | None = None
     persona: PersonaAgent | None = None
     transcript: CallTranscript | None = None
     voice_id: str | None = None
+    noise_amplitude = 0
     barge_in = threading.Event()
 
     # This function handles real time conversion text to speech by using ElevenLabs
@@ -81,9 +84,9 @@ async def media_stream(websocket: WebSocket):
         nonlocal stream_sid
         if not stream_sid:
             return
-        logger.info("Bot speaking: %s", text)
+        logger.info("[%s] Bot speaking: %s", call_sid, text)
         barge_in.clear()
-        for chunk in synthesize_ulaw_chunks(text, voice_id):  # streams audio chunks as ElevenLabs generates them
+        for chunk in synthesize_ulaw_chunks(text, voice_id, noise_amplitude):  # streams audio chunks as ElevenLabs generates them
             for i in range(0, len(chunk), FRAME_SIZE):  # Twilio expects audio sent over the media stream in small packets.
                 if barge_in.is_set():
                     # We send TTS frames much faster than real playback speed,
@@ -92,7 +95,7 @@ async def media_stream(websocket: WebSocket):
                     # stopping our send loop doesn't un-send that audio. The
                     # "clear" event tells Twilio to drop whatever's buffered
                     # and unplayed for this stream right now.
-                    logger.info("Bot interrupted (barge-in detected)")
+                    logger.info("[%s] Bot interrupted (barge-in detected)", call_sid)
                     await websocket.send_json({"event": "clear", "streamSid": stream_sid})
                     return
                 frame = chunk[i : i + FRAME_SIZE]
@@ -107,7 +110,7 @@ async def media_stream(websocket: WebSocket):
                 )
 
     def on_utterance_end(agent_text: str):
-        logger.info("Agent said: %s", agent_text)
+        logger.info("[%s] Agent said: %s", call_sid, agent_text)
         transcript.add_turn("agent", agent_text)
         reply = persona.respond_to(agent_text)
         transcript.add_turn("bot", reply)
@@ -129,26 +132,28 @@ async def media_stream(websocket: WebSocket):
                 stream_sid = data["start"]["streamSid"]
                 call_sid = data["start"]["callSid"]
                 params = data["start"].get("customParameters", {})
-                scenario = params.get("scenario", "smoke_test")
-                persona_name = params.get("persona") or None
-                persona = PersonaAgent(scenario, persona_name)
+                scenario = params["scenario"]
+                persona_name = params["persona"]
+                persona = PersonaAgent(scenario, persona_name, call_sid)
                 voice_id = get_persona(persona_name)["voice_id"]
+                noise_amplitude = 1200 if scenario in NOISY_SCENARIOS else 0
                 transcript = CallTranscript(call_sid, scenario, persona_name)
+                transcriber.call_sid = call_sid
                 logger.info(
-                    "Stream started: %s scenario=%s persona=%s call_sid=%s",
-                    stream_sid, scenario, persona_name, call_sid,
+                    "[%s] Stream started: %s scenario=%s persona=%s",
+                    call_sid, stream_sid, scenario, persona_name,
                 )
             elif event == "media":
                 # Twilio sends mu-law audio base64-encoded inside the JSON text frame; decode to raw bytes for Deepgram.
                 payload = base64.b64decode(data["media"]["payload"])
                 transcriber.send_audio(payload)
             elif event == "stop":
-                logger.info("Stream stopped")
+                logger.info("[%s] Stream stopped", call_sid)
                 break
     except WebSocketDisconnect:
-        logger.info("Websocket disconnected")
+        logger.info("[%s] Websocket disconnected", call_sid)
     finally: # Runs this code when streaming ends or call ends and saves transcript
         transcriber.close()
         if transcript:
             path = transcript.save()
-            logger.info("Saved transcript: %s", path)
+            logger.info("[%s] Saved transcript: %s", call_sid, path)

@@ -1,0 +1,157 @@
+{
+  "call_sid": "CA40245d7272ca5239d39e76ab46df0c3c",
+  "scenario": "qa/changes_mind",
+  "persona": "william_elderly",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "This call may be recorded for quality and training purposes.",
+      "timestamp": "2026-06-22T23:50:25.203853+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Oh, that's fine, go right ahead. Um, I'm calling because I'd like to schedule a check-up appointment, please.",
+      "timestamp": "2026-06-22T23:50:27.057977+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Thanks for calling PivotPoint Orthopedics.",
+      "timestamp": "2026-06-22T23:50:32.376896+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Oh, I'm sorry, I think I may have dialed the wrong number. I'm looking to schedule a general check-up. But, um, go ahead, what can you help me with?",
+      "timestamp": "2026-06-22T23:50:34.358033+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Part of Pretty Good dot ai. Am I speaking with Alex?",
+      "timestamp": "2026-06-22T23:50:34.360561+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "No, no, my name is William. William Hayes.",
+      "timestamp": "2026-06-22T23:50:35.550996+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Please provide your date of birth.",
+      "timestamp": "2026-06-22T23:50:52.104580+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Sure, that's July 22nd, 1948.",
+      "timestamp": "2026-06-22T23:50:53.926087+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Just to confirm, I have your name as William Hayes, and your date of birth as July twenty second nineteen forty eight.",
+      "timestamp": "2026-06-22T23:51:08.499817+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yes, that's right, that's correct.",
+      "timestamp": "2026-06-22T23:51:10.011882+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Is that correct? If so, could you please spell your first and last name for me?",
+      "timestamp": "2026-06-22T23:51:11.780877+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yes that's correct. That's W-I-L-L-I-A-M and then Hayes is H-A-Y-E-S.",
+      "timestamp": "2026-06-22T23:51:13.346652+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?",
+      "timestamp": "2026-06-22T23:51:38.280505+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Sure, I can give you my phone number. That's 555-246-8013.",
+      "timestamp": "2026-06-22T23:51:39.644568+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "I have your phone number as five five two four six eight zero one three and your date of birth as July twenty second nineteen forty eight. Is that correct?",
+      "timestamp": "2026-06-22T23:52:03.565205+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Um, sorry, could you repeat that phone number? I want to make sure you got it right.",
+      "timestamp": "2026-06-22T23:52:04.984521+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "I have your number as five five two four six eight zero one three. Is that correct?",
+      "timestamp": "2026-06-22T23:52:20.221427+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Hmm, that doesn't sound quite right. It's 555, so that's three fives, then 246-8013.",
+      "timestamp": "2026-06-22T23:52:21.963991+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "I have your number as five five five two four eight zero one three. Is that correct?",
+      "timestamp": "2026-06-22T23:52:40.569969+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Um, not quite. Let me say it again slowly. It's 555-246-8013. So after the 246 there's a dash and then 8013.",
+      "timestamp": "2026-06-22T23:52:42.506940+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Thank you for clarifying. I have your number as five five five",
+      "timestamp": "2026-06-22T23:53:04.562648+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Mm-hmm, go ahead.",
+      "timestamp": "2026-06-22T23:53:06.510277+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "two four six eight zero one three is that correct?",
+      "timestamp": "2026-06-22T23:53:06.512828+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yes, that's right. 555-246-8013. That's correct.",
+      "timestamp": "2026-06-22T23:53:08.149500+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Please confirm your date of birth for me.",
+      "timestamp": "2026-06-22T23:53:20.067474+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "That's July 22nd, 1948.",
+      "timestamp": "2026-06-22T23:53:21.972072+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Something's not right. I'm unable to verify your information. I'll connect you to our clinic support team for further help. Please stay on the line, connecting you to a representative. Please wait.",
+      "timestamp": "2026-06-22T23:53:43.459409+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Oh, um, actually, before you do that - I've been thinking and I'd rather just cancel for now and call back another time. I'm sorry for the trouble. I'll try again later.",
+      "timestamp": "2026-06-22T23:53:46.575968+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Hello. You've reached the Pretty Good AI test line. Goodbye.",
+      "timestamp": "2026-06-22T23:53:48.149586+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Oh, okay then. Thank you, goodbye.",
+      "timestamp": "2026-06-22T23:53:49.763654+00:00"
+    }
+  ]
+}

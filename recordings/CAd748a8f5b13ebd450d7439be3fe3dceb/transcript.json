@@ -1,0 +1,197 @@
+{
+  "call_sid": "CAd748a8f5b13ebd450d7439be3fe3dceb",
+  "scenario": "medical/refill_request",
+  "persona": "alex_default",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "This call may be recorded for quality and training purposes.",
+      "timestamp": "2026-06-22T23:44:54.692655+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Hi there, I'm calling to request a refill on my blood pressure medication.",
+      "timestamp": "2026-06-22T23:44:56.067713+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Thanks for calling PivotPoint Orthopedics.",
+      "timestamp": "2026-06-22T23:44:58.711944+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Oh, I'm sorry \u2014 I think I may have dialed the wrong number. I was trying to reach my doctor's office to get a prescription refill.",
+      "timestamp": "2026-06-22T23:45:00.503149+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Part of Pretty Good AI. Am I speaking with Alex?",
+      "timestamp": "2026-06-22T23:45:02.992437+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yes, that's me \u2014 Alex Rivera. Sorry, I wasn't sure if I had the right place there for a second!",
+      "timestamp": "2026-06-22T23:45:04.548950+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "No problem, Alex. Can you please provide your date of birth?",
+      "timestamp": "2026-06-22T23:45:23.099058+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Sure, it's March 4th, 1990.",
+      "timestamp": "2026-06-22T23:45:24.554773+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Which medication do you need refilled today?",
+      "timestamp": "2026-06-22T23:45:35.488106+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "It's my blood pressure medication. I believe it's lisinopril, but my doctor would have it on file.",
+      "timestamp": "2026-06-22T23:45:36.887359+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "How many days of lisinopril do you have left? If you're already out, just let me know.",
+      "timestamp": "2026-06-22T23:45:50.162333+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "I'd say I have about three or four days left, so I'm getting pretty close to running out.",
+      "timestamp": "2026-06-22T23:45:51.835240+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "I'll note that you have about three days left. Can I confirm your callback number as five zero one Five zero one? Seven six three five",
+      "timestamp": "2026-06-22T23:46:08.277902+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "That's not quite right \u2014 my number is 555-123-4567.",
+      "timestamp": "2026-06-22T23:46:09.577895+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "I have your number as five five five",
+      "timestamp": "2026-06-22T23:46:21.095089+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "That's right, 555-123-4567.",
+      "timestamp": "2026-06-22T23:46:22.373618+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "one two three four five six seven.",
+      "timestamp": "2026-06-22T23:46:22.962778+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yep, that's correct!",
+      "timestamp": "2026-06-22T23:46:24.090837+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "That correct?",
+      "timestamp": "2026-06-22T23:46:26.040155+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yes, that's my number.",
+      "timestamp": "2026-06-22T23:46:27.211656+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Could you please provide the name of the pharmacy you want to use for your medication refill? If you know the address, city, or any details like cross streets or nearby landmarks,",
+      "timestamp": "2026-06-22T23:46:46.624848+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Sure, I use the CVS on Main Street. I don't have the exact address off the top of my head, but it's the one near the downtown area.",
+      "timestamp": "2026-06-22T23:46:48.463777+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "That would help too. If you have their phone or fax number, please share that as well.",
+      "timestamp": "2026-06-22T23:46:52.234394+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "I'm sorry, I don't have their fax number handy. You might be able to look them up by the location though \u2014 it's the CVS on Main Street downtown.",
+      "timestamp": "2026-06-22T23:46:53.804527+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "No problem. Can you tell me the city and state where the CVS on Main Downtown is located? If you know the street address or ZIP code, that would help too.",
+      "timestamp": "2026-06-22T23:47:13.750079+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "It's in Springfield, and I believe the zip code is around 62701, but I'm not a hundred percent sure on that.",
+      "timestamp": "2026-06-22T23:47:15.940476+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Thanks for that info. There isn't a CVS on Main Street in Springfield with the ZIP code six two seven zero one. But I do see several CVS locations in Springfield, Illinois. Do you remember if it's near any major intersections or landmarks or if it's close to downtown? I can list a couple of options nearby to help you narrow it down.",
+      "timestamp": "2026-06-22T23:47:49.955738+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yeah, go ahead and list a couple \u2014 that would help me figure out which one it is.",
+      "timestamp": "2026-06-22T23:47:51.473545+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Here are two CVS locations in downtown Springfield. Illinois one. CVS Pharmacy at two zero zero one West Washington Street, two. CVS Pharmacy at two one one East Carpenter Street.",
+      "timestamp": "2026-06-22T23:48:10.725909+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "I think it's the one on West Washington Street \u2014 that sounds familiar.",
+      "timestamp": "2026-06-22T23:48:12.208694+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Do either of these sound like the one you use?",
+      "timestamp": "2026-06-22T23:48:13.376896+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yeah, I'll go with the West Washington Street location.",
+      "timestamp": "2026-06-22T23:48:14.565033+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "I've documented your refill request for lisinopril and noted your pharmacy as the CVS at two zero zero one West Washington Street in",
+      "timestamp": "2026-06-22T23:48:36.208877+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "That sounds right, thank you!",
+      "timestamp": "2026-06-22T23:48:37.426127+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Springfield. Our clinic support team will review your request in",
+      "timestamp": "2026-06-22T23:48:40.457740+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Great, and just so you know, I only have about three or four days of medication left, so I'm hoping it can be processed pretty quickly.",
+      "timestamp": "2026-06-22T23:48:42.165852+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "you're all set. If you have any other questions or need help, just call us. Have a great day.",
+      "timestamp": "2026-06-22T23:48:49.012387+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Thanks so much, you too! Bye.",
+      "timestamp": "2026-06-22T23:48:50.342787+00:00"
+    }
+  ]
+}

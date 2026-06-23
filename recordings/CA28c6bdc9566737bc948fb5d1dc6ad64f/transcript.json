@@ -1,0 +1,117 @@
+{
+  "call_sid": "CA28c6bdc9566737bc948fb5d1dc6ad64f",
+  "scenario": "qa/vague_request",
+  "persona": "jordan_impatient",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "This call may be recorded for quality and training purposes.",
+      "timestamp": "2026-06-22T23:50:31.934734+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yeah, that's fine. Hi, um, I need to come in sometime soon \u2014 not totally sure what for exactly, just not feeling great lately.",
+      "timestamp": "2026-06-22T23:50:33.547630+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "For calling PivotPoint Orthopedics, part of Pretty Good AI. Am I speaking with Alex?",
+      "timestamp": "2026-06-22T23:50:42.124200+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "No, it's Jordan. Jordan Kim.",
+      "timestamp": "2026-06-22T23:50:44.091548+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Please provide your date of birth.",
+      "timestamp": "2026-06-22T23:50:53.134990+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "November 12th, 1985.",
+      "timestamp": "2026-06-22T23:50:54.298550+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Just to confirm, I have your name as Jordan Kim, and your date of birth as November twelfth nineteen eighty five. Is that correct? If so, could you please spell your first and last name for me?",
+      "timestamp": "2026-06-22T23:51:13.181762+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yeah that's correct. J-O-R-D-A-N, K-I-M.",
+      "timestamp": "2026-06-22T23:51:14.674394+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Would you like me to look up your record using your phone number? If so, please provide the number you have on file with us. If you're not sure, just let me know, and we can confirm your name and date of birth again.",
+      "timestamp": "2026-06-22T23:51:34.990745+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Sure, it's 555-987-6543.",
+      "timestamp": "2026-06-22T23:51:36.379157+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "I had your phone number as five five five nine eight seven six five four",
+      "timestamp": "2026-06-22T23:51:50.366370+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "No, it's 6543. Five five five, nine eight seven, six five four three.",
+      "timestamp": "2026-06-22T23:51:51.880574+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "three, and your date of birth is November twelfth nineteen eighty five. Is that correct?",
+      "timestamp": "2026-06-22T23:51:59.086152+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yes, that's right. Can we move on?",
+      "timestamp": "2026-06-22T23:52:00.776163+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Please provide your date of birth.",
+      "timestamp": "2026-06-22T23:52:10.343985+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "I already gave you that \u2014 November 12th, 1985. Can we speed this up?",
+      "timestamp": "2026-06-22T23:52:11.747024+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Something's not right with the system, and I can't pull up your record. I'll make sure our clinic support team follows up with you. Please hold while I document this for follow-up.",
+      "timestamp": "2026-06-22T23:52:30.239952+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Okay, how long is this gonna take? I still need to schedule an appointment.",
+      "timestamp": "2026-06-22T23:52:31.536004+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Connecting you to a representative. Please wait.",
+      "timestamp": "2026-06-22T23:52:35.595298+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Okay, fine. I'll hold.",
+      "timestamp": "2026-06-22T23:52:36.750661+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Hello. You've reached the Pretty Good AI test line. Goodbye.",
+      "timestamp": "2026-06-22T23:52:40.272049+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Wait, what? That's it? I still need to make an appointment! Hello?",
+      "timestamp": "2026-06-22T23:52:41.581790+00:00"
+    }
+  ]
+}

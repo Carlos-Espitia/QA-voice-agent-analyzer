@@ -1,0 +1,137 @@
+{
+  "call_sid": "CA4b2c8b308b6fa0a614fce68a2e35cde8",
+  "scenario": "medical/location_question",
+  "persona": "william_elderly",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "This call may be recorded for quality and training purposes.",
+      "timestamp": "2026-06-22T23:30:16.406459+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Oh, hello there. I'm calling because I have an appointment and I've never been to your office before. Could you tell me the address?",
+      "timestamp": "2026-06-22T23:30:18.585021+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Thanks for calling PivotPoint Orthopedic. Part of Pretty Good AI. Am I speaking with Alex?",
+      "timestamp": "2026-06-22T23:30:25.151602+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "No, no, my name is William. William Hayes.",
+      "timestamp": "2026-06-22T23:30:26.505892+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Thanks for letting me know, William. Are you calling for yourself or for someone else today?",
+      "timestamp": "2026-06-22T23:30:38.282461+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Oh, for myself, yes. Just for myself.",
+      "timestamp": "2026-06-22T23:30:39.537225+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Please provide your date of birth.",
+      "timestamp": "2026-06-22T23:30:49.070221+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Sure, that's July 22nd, 1948.",
+      "timestamp": "2026-06-22T23:30:50.458963+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Just to confirm, I have your name as William Hayes, your date of birth is July twenty second nineteen forty eight. Is that correct? If so, could you please spell your first and last name for me?",
+      "timestamp": "2026-06-22T23:31:11.107377+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yes, that's right. And the spelling is W-I-L-L-I-A-M, and Hayes is H-A-Y-E-S.",
+      "timestamp": "2026-06-22T23:31:13.051196+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Would you like to use your phone number to help look up your record? If so, please tell me the number you have on file with us. If you're not sure, just let me know.",
+      "timestamp": "2026-06-22T23:31:35.051174+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yes, I believe it's 555-246-8013.",
+      "timestamp": "2026-06-22T23:31:36.386766+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "I have your phone number as five five two four six eight zero one three. And your date of birth as July twenty second nineteen forty eight. Is that correct?",
+      "timestamp": "2026-06-22T23:31:58.029737+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Sorry, let me make sure I heard that right. You said 555-246-8013? Yes, that sounds right to me.",
+      "timestamp": "2026-06-22T23:31:59.734297+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Thank you for confirming. I have your phone number as five five five",
+      "timestamp": "2026-06-22T23:32:18.719862+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yes, go ahead.",
+      "timestamp": "2026-06-22T23:32:20.394338+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "two four six eight zero one three, and your date of birth as July twenty second nineteen forty eight.",
+      "timestamp": "2026-06-22T23:32:22.832401+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yes, that's correct.",
+      "timestamp": "2026-06-22T23:32:23.973543+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Please",
+      "timestamp": "2026-06-22T23:32:28.918808+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Oh, I'm sorry, did you say something? I didn't quite catch that.",
+      "timestamp": "2026-06-22T23:32:30.172904+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Something's not right with my system. So I can't access your records right now. I'll let our clinic support team know so they can follow-up with you. Please stay on the line while I document this for our team.",
+      "timestamp": "2026-06-22T23:32:51.579820+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Oh, alright. But actually, I just had a quick question while I have you. Could you tell me the address of the office? I've never been there before and I'm driving in from out of town.",
+      "timestamp": "2026-06-22T23:32:53.692498+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Connecting you to a representative. Please wait.",
+      "timestamp": "2026-06-22T23:32:55.370574+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Oh, okay. I'll hold then, thank you.",
+      "timestamp": "2026-06-22T23:32:56.982971+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Hello. You've reached the Pretty Good AI test line. Goodbye.",
+      "timestamp": "2026-06-22T23:33:00.338541+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Oh my. Well, I guess I'll have to call back and ask about that address. Goodbye.",
+      "timestamp": "2026-06-22T23:33:02.050190+00:00"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "call_sid": "CAd4656e71b9ec7e6bc1fd77f77dce2a87",
+  "scenario": "medical/hours_question",
+  "persona": "jordan_impatient",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "This call may be recorded for quality and training purposes.",
+      "timestamp": "2026-06-22T23:44:54.379825+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Hi yeah I just need to know your Saturday hours, can anyone help me with that?",
+      "timestamp": "2026-06-22T23:44:55.963815+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "For calling PivotPoint Orthopedics, part of Pretty Good AI. Am I speaking with Alex?",
+      "timestamp": "2026-06-22T23:45:04.182598+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Uh no, I'm the one calling. I just need to know your Saturday hours real quick.",
+      "timestamp": "2026-06-22T23:45:05.504522+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "How can I help you today?",
+      "timestamp": "2026-06-22T23:45:05.505758+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yeah I just need to know what time you're open on Saturdays. That's it.",
+      "timestamp": "2026-06-22T23:45:07.444368+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Pivot Point Orthopedics is open Monday through Friday. The clinic is closed on Saturdays. Is there anything else I can help with?",
+      "timestamp": "2026-06-22T23:45:24.322130+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Oh, closed on Saturdays? Okay, good to know. That's all I needed, thanks.",
+      "timestamp": "2026-06-22T23:45:26.196954+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "You're welcome. Have a great day.",
+      "timestamp": "2026-06-22T23:45:36.620548+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "You too, bye.",
+      "timestamp": "2026-06-22T23:45:37.909202+00:00"
+    }
+  ]
+}
