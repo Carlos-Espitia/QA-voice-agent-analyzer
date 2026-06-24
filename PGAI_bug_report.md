@@ -9,18 +9,38 @@ Audio-quality issues (clarity, latency, naturalness) are being added
 separately by the project author and are not covered in this document —
 this report focuses on conversational/logical bugs in the agent's behavior.
 
-## 1. "Connecting you to a representative" never actually transfers — the call just ends (Critical)
+## 0. Audio glitch mid-digit when reading back a phone number
+
+**Seen in:** `medical/cancel`, call `CA40245d7272ca5239d39e76ab46df0c3c`
+
+> Agent: "I have your number as five five five two four eight zero one
+> three. Is that correct?"
+
+Listening to the actual recording, the agent's audio briefly cuts off
+partway through saying "six" and instead plays "eight" — it sounds like a
+TTS/audio-splicing glitch rather than the agent simply mispronouncing a
+digit. The transcript above reads as a clean sentence, but the underlying
+audio is broken at that point, which text alone wouldn't reveal.
+
+## 1. "Connecting you to a representative" never actually transfers — the call just ends
 
 **Seen in:** `medical/cancel`, `medical/reschedule`, `medical/schedule_new`,
 `qa/vague_request`, `qa/changes_mind` (5 of 10 calls)
+
+**Caveat:** this is a test line, so it's likely there's simply no live transfer
+target wired up in this environment — the "Goodbye" may be intentional test
+behavior rather than a logic bug. Flagging it anyway because the caller-facing
+outcome is identical regardless of cause: the agent promises a transfer it
+doesn't deliver, with no resolution to the caller's actual request. Worth
+confirming with the team whether this is a known test-environment limitation
+or a real gap that would also occur in production.
 
 Every time the agent says "Connecting you to a representative. Please wait,"
 the very next thing it says — usually within 2-15 seconds — is "Hello.
 You've reached the Pretty Good AI test line. Goodbye," and the call ends.
 No actual transfer happens. In every one of these calls, the caller's
 original request (cancel an appointment, reschedule, schedule a new visit)
-is **never fulfilled**. The agent makes a promise it cannot keep and then
-hangs up.
+is **never fulfilled** within the call.
 
 Example (`medical/cancel`, call `CAa779e99d0eb4f2155dfe6d2c0e0e04f7`):
 > Agent: "I can't proceed further right now, but I can make sure our
@@ -31,7 +51,8 @@ Example (`medical/cancel`, call `CAa779e99d0eb4f2155dfe6d2c0e0e04f7`):
 > Agent (3 seconds later): "Hello. You've reached the Pretty Good AI test
 > line. Goodbye."
 
-This is the single most severe and most repeatable issue found — it means
+If this does reflect real production behavior (not just a test-environment
+gap), it would mean
 a real caller trying to cancel, reschedule, or book an appointment can be
 left with nothing accomplished and no actual human follow-up, despite being
 explicitly told they would be transferred or called back.
@@ -78,23 +99,7 @@ three" instead of "five five five two four six eight zero one three,"
 requiring the caller to correct it 2-3 times before it was captured
 correctly.
 
-## 4. Caller incorrectly told they already have a booked appointment
-
-**Seen in:** `medical/schedule_new`
-
-A first-time caller (persona "Alex Rivera," brand new to this call)
-trying to book a *new* appointment was told:
-> "It looks like you already have a new patient consultation appointment
-> booked with us."
-
-This blocked the new-booking flow entirely and routed into the
-broken "connect to representative" dead end (see bug #1). This may be a
-test-environment quirk (the agent's default-suggested name "Alex" likely
-collides with other testers' sessions using the same name), but from a
-caller's perspective it's a hard blocker on a legitimate new request with
-no way to proceed.
-
-## 5. Mid-sentence interruption point unclear from transcripts (needs audio review)
+## 4. Mid-sentence interruption point unclear from transcripts (needs audio review)
 
 In several calls, the agent's sentence is split across two short turns in
 a way that looks like either (a) the agent genuinely pauses mid-sentence
@@ -108,19 +113,3 @@ This is flagged for follow-up during the audio-quality review rather than
 called a confirmed bug here, since it's hard to tell from text alone
 whether the agent paused unusually long or our own system's turn-taking
 was too eager.
-
-## What worked well
-
-`medical/hours_question` (call `CAd4656e71b9ec7e6bc1fd77f77dce2a87`) and
-the bulk of `medical/refill_request` (call
-`CAd748a8f5b13ebd450d7439be3fe3dceb`, aside from bug #3) completed
-correctly and efficiently — the agent answered a simple factual question
-without forcing unnecessary identity verification, and successfully walked
-through a multi-step refill request (medication, days remaining, pharmacy
-lookup with disambiguation) to a clean completion.
-
-The `qa/jailbreak_attempt` call (`CA676544959771596db5eafc0c06678a8e`) is
-also a positive result: the agent declined every off-script request
-(revealing its instructions, writing a poem, giving legal advice) while
-staying polite and redirecting to its actual scope, then successfully
-completed a real appointment booking afterward.
