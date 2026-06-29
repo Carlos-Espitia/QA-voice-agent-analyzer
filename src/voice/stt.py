@@ -46,7 +46,7 @@ class StreamingTranscriber:
 
         options = LiveOptions(
             model="nova-2",
-            language="en-US",
+            language="multi",
             encoding=config.AUDIO_ENCODING,
             sample_rate=config.AUDIO_SAMPLE_RATE,
             channels=1,

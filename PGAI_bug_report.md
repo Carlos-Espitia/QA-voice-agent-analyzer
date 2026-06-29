@@ -79,7 +79,7 @@ This happened with two different personas (Jordan Kim, William Hayes) in
 three separate calls, suggesting it's a systemic issue with the lookup/
 verification flow rather than a one-off glitch.
 
-## 3. Phone number read-back is sometimes garbled or wrong
+## 3. Phone number read-back is sometimes wrong
 
 **Seen in:** `medical/cancel`, `medical/refill_request`, `qa/changes_mind`
 

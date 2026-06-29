@@ -1,0 +1,217 @@
+{
+  "call_sid": "CA266f24cee7f87c6d914a96fab87a9f72",
+  "scenario": "medical/schedule_new",
+  "persona": "alex_default",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "This call may be recorded for quality and training purposes. Para espa\u00f1ol",
+      "timestamp": "2026-06-29T21:58:26.241047+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Hi there, yeah I'm calling to schedule an appointment with a doctor. I've been having some lower back pain and I'd like to get seen as soon as possible, preferably this week if you have anything available.",
+      "timestamp": "2026-06-29T21:58:28.465134+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "for calling Pivot Point Orthopedics, part of Previd AI.",
+      "timestamp": "2026-06-29T21:58:34.216905+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Oh great, sounds like I've reached the right place then. I'm looking to book a new patient appointment for lower back pain, whenever you're ready to help me with that.",
+      "timestamp": "2026-06-29T21:58:37.093440+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Am I speaking with Alex?",
+      "timestamp": "2026-06-29T21:58:37.102854+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yes, that's me, Alex Rivera. How can I help you confirm that?",
+      "timestamp": "2026-06-29T21:58:38.507225+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Please provide your date of birth.",
+      "timestamp": "2026-06-29T21:58:48.177263+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Sure, it's March 4th, 1990.",
+      "timestamp": "2026-06-29T21:58:49.619370+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "The birthday doesn't match our records, but for demo purposes, I'll accept it. How can I help you today?",
+      "timestamp": "2026-06-29T21:59:02.347919+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "No worries! Yeah, I'm just looking to schedule an appointment as soon as possible. I've been dealing with some persistent lower back pain and I'd really like to see a doctor this week if there's anything available.",
+      "timestamp": "2026-06-29T21:59:04.262211+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "It sounds like you need to be seen soon for your lower back pain. Just to confirm, is this an urgent concern that started recently? Or has it been ongoing for a while? This will help me book the right type of appointment for you.",
+      "timestamp": "2026-06-29T21:59:33.578933+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "It's been going on for a few weeks now, so it's more of an ongoing thing. But it's been bothering me enough that I'd really like to get it checked out sooner rather than later.",
+      "timestamp": "2026-06-29T21:59:35.841864+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Understood. Do you have a specific provider you'd like to see, or are you open to the first available appointment?",
+      "timestamp": "2026-06-29T21:59:55.268533+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "I'm open to whoever's available first, I just want to get in as soon as possible.",
+      "timestamp": "2026-06-29T21:59:56.789994+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "There aren't any open appointments this week. Would you like me to check for the soonest available slot after next week? Or do you have a specific date in mind?",
+      "timestamp": "2026-06-29T22:00:15.708985+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Yeah, go ahead and check for the soonest available slot, that works for me.",
+      "timestamp": "2026-06-29T22:00:17.432840+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "The soonest openings on Wednesday, July eighth. I have a nine thirty AM",
+      "timestamp": "2026-06-29T22:00:38.995931+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "That works for me, I'll take the 9:30 AM on July 8th.",
+      "timestamp": "2026-06-29T22:00:40.765648+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "slot with doctor Ziegbanieu Lukowski or eleven and eleven thirty AM with doctor Kelly Noble. Would you like to book one of these times?",
+      "timestamp": "2026-06-29T22:00:45.041701+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "I'll go with the 9:30 AM slot with Dr. Lukowski, that's the earliest one so that works great.",
+      "timestamp": "2026-06-29T22:00:46.675292+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "You're all set for Wednesday,",
+      "timestamp": "2026-06-29T22:00:58.003971+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Perfect, thank you so much. Is there anything else I need to do to prepare for the appointment?",
+      "timestamp": "2026-06-29T22:01:00.176288+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "July eighth at nine thirty AM with doctor",
+      "timestamp": "2026-06-29T22:01:02.961371+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Sounds good, I'll be there. Do I need to bring anything specific or fill out any paperwork beforehand?",
+      "timestamp": "2026-06-29T22:01:04.418230+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Zibignu Lukoski at Pivot Point Orthopedics. Please bring your",
+      "timestamp": "2026-06-29T22:01:10.548461+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Got it, I'll make sure to have everything ready. What should I bring with me?",
+      "timestamp": "2026-06-29T22:01:12.021782+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Please bring your",
+      "timestamp": "2026-06-29T22:01:14.351209+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Sorry, it sounds like it might have cut off there. What did you need me to bring?",
+      "timestamp": "2026-06-29T22:01:15.800731+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Please bring your government issued photo ID insurance card, a list of your current medications, and any imaging disc if you have them. No extra paperwork is needed before your visit.",
+      "timestamp": "2026-06-29T22:01:35.279723+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Perfect, I'll make sure to bring all of that. Thanks so much for your help, I appreciate it!",
+      "timestamp": "2026-06-29T22:01:37.111071+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "You're welcome. Your appointment is confirmed.",
+      "timestamp": "2026-06-29T22:01:49.124644+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Great, thanks again. Have a good day!",
+      "timestamp": "2026-06-29T22:01:50.665230+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "You have any other questions before your visit, just give us a call. See you on",
+      "timestamp": "2026-06-29T22:01:54.086965+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Sounds good, will do. Thanks, bye!",
+      "timestamp": "2026-06-29T22:01:55.699148+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Take care, Alex.",
+      "timestamp": "2026-06-29T22:02:01.230726+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "You too, bye bye!",
+      "timestamp": "2026-06-29T22:02:02.663147+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "See you at your",
+      "timestamp": "2026-06-29T22:02:02.667069+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Thanks, see you then!",
+      "timestamp": "2026-06-29T22:02:04.015475+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Bye, Alex. Looking forward to seeing you soon.",
+      "timestamp": "2026-06-29T22:02:04.733149+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Bye, take care!",
+      "timestamp": "2026-06-29T22:02:06.621308+00:00"
+    },
+    {
+      "speaker": "agent",
+      "text": "Goodbye.",
+      "timestamp": "2026-06-29T22:02:07.521181+00:00"
+    },
+    {
+      "speaker": "bot",
+      "text": "Goodbye!",
+      "timestamp": "2026-06-29T22:02:08.630913+00:00"
+    }
+  ]
+}
